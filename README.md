@@ -50,19 +50,19 @@ Rscript join_list_of_files.R list_q3.tsv outputs/join_output.tsv
 
 1. Download the big_data.tsv.gz
    
-cd data
-wget https://figshare.com/ndownloader/files/49000657?private_link=9f1324117c2f6e734f2b -O big_data.tsv.gz
+  cd data
+  wget https://figshare.com/ndownloader/files/49000657?private_link=9f1324117c2f6e734f2b -O big_data.tsv.gz
    
-3. Get the matrix by removing first column as first column is id which is a string
+2. Get the matrix by removing first column as first column is id which is a string
 
    zcat data/big_data.tsv.gz | cut --complement -f1 > data/full_data.tsv
    
-5. Install gnuplot to to make heatmap.
+3. Install gnuplot to to make heatmap.
 
    sudo apt install gnuplot
    gnuplot -e "output='outputs/big_matrix.eps' ; input='data/full_data.tsv' "  gnuplot.gp
    
-7. Use ghostscript to use ps2pdf.
+4. Use ghostscript to use ps2pdf.
 
    sudo apt install ghostscript
    ps2pdf outputs/big_matrix.eps outputs/big_matrix.pdf
