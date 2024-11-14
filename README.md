@@ -9,8 +9,8 @@
 
 3. Use the zless command to decompress q1_data.tsv.gz and pipe the output to your Python script: zless q1_data.tsv.gz | 
    python3 line_selection.py
-
-   ############ Question 2 : Plotting a group of lines ##########
+   
+############ Question 2 : Plotting a group of lines ##########
 
 1. The script(plot_lines.R) reads tsv data from "stdin" making it flexible for various input data sources (files or 
    pipelines).
