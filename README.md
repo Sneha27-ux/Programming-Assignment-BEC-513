@@ -44,7 +44,7 @@ cat data/q2_data.tsv | Rscript plot_lines.R "different_clusters.png" "Relative f
 1. first_hundred_numbers.tsv file serves as the standard input that will be labelled according to which quantile each 
    number falls into.
 2. The numbers from first_hundred_numbers.tsv are then compared against the quantile bins calculated using q4_data.tsv.
-3. And then run: cat first_hundred_numbers.tsv | python group_in_quantiles.py 4
+3. And then run: cat first_hundred_numbers.tsv | python group_in_quantiles.py 4 > Quantiles.tsv
 
 
 
