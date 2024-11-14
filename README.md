@@ -33,6 +33,7 @@ cat data/q2_data.tsv | Rscript plot_lines.R "different_clusters.png" "Relative f
 
 
 ############## Question 3  : Merge multiple files #################
+
 This R script(join_list_of_files.R) reads a list of file paths from an input text file, loads each tsv file into a data frame, and merges them sequentially by the first column (key). The result is written to an output file
 
 Rscript join_list_of_files.R data/list_q3.tsv outputs/join_output.tsv
