@@ -33,25 +33,15 @@ cat data/q2_data.tsv | Rscript plot_lines.R "different_clusters.png" "Relative f
 
 
 ############## Question 3  : Merge multiple files #################
+This R script(join_list_of_files.R) reads a list of file paths from an input text file, loads each tsv file into a data frame, and merges them sequentially by the first column (key). The result is written to an output file
 
-
-
-
-
-
+Rscript join_list_of_files.R data/list_q3.tsv outputs/join_output.tsv
 
 ###########  Question 4 : Label with quantiles ##############
 1. first_hundred_numbers.tsv file serves as the standard input that will be labelled according to which quantile each 
    number falls into.
 2. The numbers from first_hundred_numbers.tsv are then compared against the quantile bins calculated using q4_data.tsv.
 3. And then run: cat first_hundred_numbers.tsv | python group_in_quantiles.py 4 > Quantiles.tsv
-
-
-
-
-
-
-
 
 ########## Question 5 : Plotting big matrix ################
 
