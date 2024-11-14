@@ -40,6 +40,7 @@ cat data/q2_data.tsv | Rscript plot_lines.R "different_clusters.png" "Relative f
 Rscript join_list_of_files.R list_q3.tsv outputs/join_output.tsv
 
 ###########  Question 4 : Label with quantiles ##############
+
 1. first_hundred_numbers.tsv file serves as the standard input that will be labelled according to which quantile each 
    number falls into.
 2. The numbers from first_hundred_numbers.tsv are then compared against the quantile bins calculated using q4_data.tsv.
@@ -47,3 +48,7 @@ Rscript join_list_of_files.R list_q3.tsv outputs/join_output.tsv
 
 ########## Question 5 : Plotting big matrix ################
 
+1. Download the big_data.tsv.gz
+2. Get the matrix by removing first column as first column is id which is a string
+3. Install gnuplot to to make heatmap.
+4. Use ghostscript to use ps2pdf.
