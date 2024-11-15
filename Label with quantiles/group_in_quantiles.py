@@ -3,7 +3,6 @@
 import sys
 import pandas as pd
 
-# Check if the correct number of arguments is provided
 if len(sys.argv) != 2:
     print("Usage: python group_in_quantiles.py <number_of_quantiles>")
     sys.exit(1)
@@ -15,7 +14,7 @@ q4_data = pd.read_csv(q4_data_path, sep='\t', header=None, names=['value'])
 
 input_data = sys.stdin.read().strip().split()
 
-# Convert the input data to a pandas Series
+
 try:
     input_series = pd.Series([float(x) for x in input_data], name="value")
 except ValueError:
@@ -25,7 +24,7 @@ except ValueError:
 # Use qcut to calculate quantile bins based on the reference data (q4_data)
 _, bins = pd.qcut(q4_data['value'], q=num_quantiles, retbins=True)
 
-# Label the input data based on the quantile bins
+
 quantile_labels = pd.cut(input_series, bins=bins, labels=[f'q{i+1}' for i in range(num_quantiles)])
 
 # Create a DataFrame with quantile labels and intervals
